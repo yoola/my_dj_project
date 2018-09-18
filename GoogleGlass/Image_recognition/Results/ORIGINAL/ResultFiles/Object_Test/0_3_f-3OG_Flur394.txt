@@ -1,0 +1,19 @@
+Test image: ../Test_Pics_B11/3OG_Flur394/Object_Test/0_3_f-3OG_Flur394.jpg
+
+Best matches by rank: ['./../Test_Pics_B11/2OG_Flur297/Object/1_0_hf_2OG_Flur297.jpg']
+
+Best matches by SURF distance: ./../Test_Pics_B11/2OG_Flur297/Object/1_0_hf_2OG_Flur297.jpg
+
+Best matches ssim: ./../Test_Pics_B11/2OG_Flur297/Object/1_0_hf_2OG_Flur297.jpg
+
+Best matches correl: ./../Test_Pics_B11/2OG_Flur297/Object/1_0_hf_2OG_Flur297.jpg
+
+Sorted by ssim: [('./../Test_Pics_B11/2OG_Flur297/Object/1_0_hf_2OG_Flur297.jpg', 0.5133320434827604, 1.2632607370615005, 3.0357926408611116)]
+
+Sorted by correl: [('./../Test_Pics_B11/2OG_Flur297/Object/1_0_hf_2OG_Flur297.jpg', 0.5133320434827604, 1.2632607370615005, 3.0357926408611116)]
+
+Sorted by SURF distance: [('./../Test_Pics_B11/2OG_Flur297/Object/1_0_hf_2OG_Flur297.jpg', 0.5133320434827604, 1.2632607370615005, 3.0357926408611116)]
+
+Sorted by ranks: [('./../Test_Pics_B11/2OG_Flur297/Object/1_0_hf_2OG_Flur297.jpg', 1.0)]
+------------------------------------------------------------------------
+

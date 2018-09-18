@@ -1,0 +1,19 @@
+Test image: ../Test_Pics_B11/2OG_Flur292/Object_Test/1_3_h_2OG_Flur292.jpg
+
+Best matches by rank: ['./../Test_Pics_B11/2OG_Flur292/Object/1_0_h_2OG_Flur292.jpg']
+
+Best matches by SURF distance: ./../Test_Pics_B11/2OG_Flur292/Object/1_0_h_2OG_Flur292.jpg
+
+Best matches ssim: ./../Test_Pics_B11/1OG_Flur192/Object/0_0_h_1OG_Flur192.jpg
+
+Best matches correl: ./../Test_Pics_B11/2OG_Flur292/Object/1_0_h_2OG_Flur292.jpg
+
+Sorted by ssim: [('./../Test_Pics_B11/1OG_Flur192/Object/0_0_h_1OG_Flur192.jpg', 0.5080717407508135, 0.701375674456358, 0.3951638587582426), ('./../Test_Pics_B11/2OG_Flur292/Object/1_0_h_2OG_Flur292.jpg', 0.4563758769351637, 0.6884005963802338, 0.9086803298196172)]
+
+Sorted by correl: [('./../Test_Pics_B11/2OG_Flur292/Object/1_0_h_2OG_Flur292.jpg', 0.4563758769351637, 0.6884005963802338, 0.9086803298196172), ('./../Test_Pics_B11/1OG_Flur192/Object/0_0_h_1OG_Flur192.jpg', 0.5080717407508135, 0.701375674456358, 0.3951638587582426)]
+
+Sorted by SURF distance: [('./../Test_Pics_B11/2OG_Flur292/Object/1_0_h_2OG_Flur292.jpg', 0.4563758769351637, 0.6884005963802338, 0.9086803298196172), ('./../Test_Pics_B11/1OG_Flur192/Object/0_0_h_1OG_Flur192.jpg', 0.5080717407508135, 0.701375674456358, 0.3951638587582426)]
+
+Sorted by ranks: [('./../Test_Pics_B11/2OG_Flur292/Object/1_0_h_2OG_Flur292.jpg', 1.0), ('./../Test_Pics_B11/1OG_Flur192/Object/0_0_h_1OG_Flur192.jpg', 2.0)]
+------------------------------------------------------------------------
+

@@ -1,0 +1,39 @@
+{% extends "admin/base.html" %}
+{% block content %}
+  <ul>
+    <li>
+      <a href="{% url 'model_form_upload' %}">Model Form Upload</a>
+    </li>
+    <li>
+      <a href="{% url 'image_results' %}">Image Results</a>
+    </li>
+    <li>
+      <a href="{% url 'admin:index' %}">Admin Panel</a>
+    </li>
+  </ul>
+
+  <p>Uploaded files:</p>
+  <ul>
+    {% for obj in documents %}
+      <li>
+        <a href="{{ obj.document.url }}">{{ obj.document.name }}</a>
+        <small>(Uploaded at: {{ obj.uploaded_at }})</small>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <form method='post'>{% csrf_token %}
+    <label for="docSelect">Choose image and object type: </label>
+    <select type="text" id="docSelect" name="docSelect">
+        {% for obj in documents %}
+          <option href="{% url 'image_results' %}" {{ obj.document.url }}">{{ obj.document.name }}</option>
+        {% endfor %}
+    </select>
+    <select type="text" id="docSelect2" name="docSelect2">
+        <option value="f">Fire extinguisher</option>
+        <option value="h">Heater</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Process Image"/>
+  </form>
+{% endblock %}

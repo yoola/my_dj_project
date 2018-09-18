@@ -1,0 +1,19 @@
+Test image: ../Test_Pics_B11/2OG_Flur295/Object_Test/0_3_f_2OG_Flur295.jpg
+
+Best matches by rank: ['./../Test_Pics_B11/2OG_Flur295/Object/0_0_f_2OG_Flur295.jpg', './../Test_Pics_B11/2OG_Flur295/Object/0_1_f_2OG_Flur295.jpg']
+
+Best matches by SURF distance: ./../Test_Pics_B11/2OG_Flur295/Object/2_1_f_2OG_Flur295.jpg
+
+Best matches ssim: ./../Test_Pics_B11/2OG_Flur295/Object/0_0_f_2OG_Flur295.jpg
+
+Best matches correl: ./../Test_Pics_B11/2OG_Flur295/Object/0_1_f_2OG_Flur295.jpg
+
+Sorted by ssim: [('./../Test_Pics_B11/2OG_Flur295/Object/0_0_f_2OG_Flur295.jpg', 0.6564707020661816, 1.2603012584149837, 0.5930289716029472), ('./../Test_Pics_B11/2OG_Flur295/Object/0_1_f_2OG_Flur295.jpg', 0.6281972577627137, 1.0792680457234383, 0.6607232562979812), ('./../Test_Pics_B11/2OG_Flur295/Object/2_1_f_2OG_Flur295.jpg', 0.6222634272623676, 0.836590863764286, 0.4668647019482338), ('./../Test_Pics_B11/2OG_Flur295/Object/0_2_f_2OG_Flur295.jpg', 0.6141085516544004, 1.1786242723464966, 0.47298536721135837), ('./../Test_Pics_B11/3OG_Flur394/Object/2_1_f_3OG_Flur394.jpg', 0.5786041907467123, 1.776272103190422, 0.46861473272126586), ('./../Test_Pics_B11/3OG_Flur394/Object/2_0_f_3OG_Flur394.jpg', 0.5717996958841912, 1.0842482596635818, 0.5015361474112043)]
+
+Sorted by correl: [('./../Test_Pics_B11/2OG_Flur295/Object/0_1_f_2OG_Flur295.jpg', 0.6281972577627137, 1.0792680457234383, 0.6607232562979812), ('./../Test_Pics_B11/2OG_Flur295/Object/0_0_f_2OG_Flur295.jpg', 0.6564707020661816, 1.2603012584149837, 0.5930289716029472), ('./../Test_Pics_B11/3OG_Flur394/Object/2_0_f_3OG_Flur394.jpg', 0.5717996958841912, 1.0842482596635818, 0.5015361474112043), ('./../Test_Pics_B11/2OG_Flur295/Object/0_2_f_2OG_Flur295.jpg', 0.6141085516544004, 1.1786242723464966, 0.47298536721135837), ('./../Test_Pics_B11/3OG_Flur394/Object/2_1_f_3OG_Flur394.jpg', 0.5786041907467123, 1.776272103190422, 0.46861473272126586), ('./../Test_Pics_B11/2OG_Flur295/Object/2_1_f_2OG_Flur295.jpg', 0.6222634272623676, 0.836590863764286, 0.4668647019482338)]
+
+Sorted by SURF distance: [('./../Test_Pics_B11/2OG_Flur295/Object/2_1_f_2OG_Flur295.jpg', 0.6222634272623676, 0.836590863764286, 0.4668647019482338), ('./../Test_Pics_B11/2OG_Flur295/Object/0_1_f_2OG_Flur295.jpg', 0.6281972577627137, 1.0792680457234383, 0.6607232562979812), ('./../Test_Pics_B11/3OG_Flur394/Object/2_0_f_3OG_Flur394.jpg', 0.5717996958841912, 1.0842482596635818, 0.5015361474112043), ('./../Test_Pics_B11/2OG_Flur295/Object/0_2_f_2OG_Flur295.jpg', 0.6141085516544004, 1.1786242723464966, 0.47298536721135837), ('./../Test_Pics_B11/2OG_Flur295/Object/0_0_f_2OG_Flur295.jpg', 0.6564707020661816, 1.2603012584149837, 0.5930289716029472), ('./../Test_Pics_B11/3OG_Flur394/Object/2_1_f_3OG_Flur394.jpg', 0.5786041907467123, 1.776272103190422, 0.46861473272126586)]
+
+Sorted by ranks: [('./../Test_Pics_B11/2OG_Flur295/Object/0_0_f_2OG_Flur295.jpg', 2.0), ('./../Test_Pics_B11/2OG_Flur295/Object/0_1_f_2OG_Flur295.jpg', 2.0), ('./../Test_Pics_B11/2OG_Flur295/Object/2_1_f_2OG_Flur295.jpg', 3.0), ('./../Test_Pics_B11/3OG_Flur394/Object/2_0_f_3OG_Flur394.jpg', 3.0), ('./../Test_Pics_B11/2OG_Flur295/Object/0_2_f_2OG_Flur295.jpg', 4.0), ('./../Test_Pics_B11/3OG_Flur394/Object/2_1_f_3OG_Flur394.jpg', 5.0)]
+------------------------------------------------------------------------
+

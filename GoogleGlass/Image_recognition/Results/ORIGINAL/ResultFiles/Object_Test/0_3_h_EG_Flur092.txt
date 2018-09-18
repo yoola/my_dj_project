@@ -1,0 +1,19 @@
+Test image: ../Test_Pics_B11/EG_Flur092/Object_Test/0_3_h_EG_Flur092.jpg
+
+Best matches by rank: ['./../Test_Pics_B11/3OG_Flur392/Object/0_2_h_3OG_Flur392.jpg']
+
+Best matches by SURF distance: ./../Test_Pics_B11/3OG_Flur392/Object/0_2_h_3OG_Flur392.jpg
+
+Best matches ssim: ./../Test_Pics_B11/3OG_Flur392/Object/0_2_h_3OG_Flur392.jpg
+
+Best matches correl: ./../Test_Pics_B11/3OG_Flur392/Object/0_2_h_3OG_Flur392.jpg
+
+Sorted by ssim: [('./../Test_Pics_B11/3OG_Flur392/Object/0_2_h_3OG_Flur392.jpg', 0.5523563284314208, 1.2281961105763912, 0.35621457928645234), ('./../Test_Pics_B11/3OG_R310/Object/0_2_h_3OG_R310.jpg', 0.505260734915319, 2.9154435992240906, -0.28523111433001497), ('./../Test_Pics_B11/3OG_R310/Object/0_1_h_3OG_R310.jpg', 0.5035038414190537, 2.9140825159847736, -0.2924730503741048)]
+
+Sorted by correl: [('./../Test_Pics_B11/3OG_Flur392/Object/0_2_h_3OG_Flur392.jpg', 0.5523563284314208, 1.2281961105763912, 0.35621457928645234), ('./../Test_Pics_B11/3OG_R310/Object/0_2_h_3OG_R310.jpg', 0.505260734915319, 2.9154435992240906, -0.28523111433001497), ('./../Test_Pics_B11/3OG_R310/Object/0_1_h_3OG_R310.jpg', 0.5035038414190537, 2.9140825159847736, -0.2924730503741048)]
+
+Sorted by SURF distance: [('./../Test_Pics_B11/3OG_Flur392/Object/0_2_h_3OG_Flur392.jpg', 0.5523563284314208, 1.2281961105763912, 0.35621457928645234), ('./../Test_Pics_B11/3OG_R310/Object/0_1_h_3OG_R310.jpg', 0.5035038414190537, 2.9140825159847736, -0.2924730503741048), ('./../Test_Pics_B11/3OG_R310/Object/0_2_h_3OG_R310.jpg', 0.505260734915319, 2.9154435992240906, -0.28523111433001497)]
+
+Sorted by ranks: [('./../Test_Pics_B11/3OG_Flur392/Object/0_2_h_3OG_Flur392.jpg', 1.0), ('./../Test_Pics_B11/3OG_R310/Object/0_2_h_3OG_R310.jpg', 2.0), ('./../Test_Pics_B11/3OG_R310/Object/0_1_h_3OG_R310.jpg', 3.0)]
+------------------------------------------------------------------------
+

@@ -1,0 +1,62 @@
+Test image 																		SSIM		CORREL		SURF		RANK		COUNTER			TIME
+
+Match 																		Room/Image		Room/Image		Room/Image		Room/Image	Room/Image
+
+../Test_Pics_B11/1OG_Flur192/Object_Test/0_3_h_1OG_Flur192.jpg						1/1			1/1			1/1			[1]/[1]			[1]/[1]		16.010594844818115
+
+../Test_Pics_B11/1OG_Flur194/Object_Test/0_3_f_1OG_Flur194.jpg						1/1			0/0			1/1			[1]/[1]			[1]/[1]		14.625692129135132
+
+../Test_Pics_B11/2OG_Flur292/Object_Test/0_3_hf_2OG_Flur292.jpg						1/1			1/1			1/1			[1]/[1]			[1]/[1]		2.130312204360962
+
+../Test_Pics_B11/2OG_Flur292/Object_Test/1_3_h_2OG_Flur292.jpg						0/0			1/1			1/1			[1]/[1]			[1]/[1]		16.27903985977173
+
+../Test_Pics_B11/2OG_Flur292/Object_Test/2_3_h_2OG_Flur292.jpg						1/1			1/1			0/0			[1]/[1]			[1]/[1]		10.49557089805603
+
+../Test_Pics_B11/2OG_Flur295/Object_Test/2_3_f_2OG_Flur295.jpg						1/1			1/1			1/1			[1]/[1]			[1]/[1]		14.01993179321289
+
+../Test_Pics_B11/2OG_Flur295/Object_Test/0_3_f_2OG_Flur295.jpg						1/1			1/1			1/0			[1, 1]/[1, 1]			[1]/[1]		10.412142038345337
+
+../Test_Pics_B11/2OG_Flur295/Object_Test/1_3_f_2OG_Flur295.jpg						1/1			0/0			1/1			[1]/[1]			[1]/[1]		13.506951093673706
+
+../Test_Pics_B11/2OG_Flur296/Object_Test/0_3_f_2OG_Flur296.jpg						1/1			1/1			0/0			[1, 1]/[1, 1]			[1]/[1]		10.33287787437439
+
+../Test_Pics_B11/2OG_Flur296/Object_Test/1_3_f_2OG_Flur296.jpg						1/1			0/0			0/0			[1, 0]/[1]			[1, 0]/[1]		14.928314924240112
+
+../Test_Pics_B11/2OG_Flur297/Object_Test/2_3_hf_2OG_Flur297.jpg						1/1			1/1			1/0			[1]/[1]			[1]/[1]		6.01312518119812
+
+../Test_Pics_B11/3OG_Flur392/Object_Test/0_3_h_3OG_Flur392.jpg						0/0			1/1			1/1			[1]/[1]			[1]/[1]		13.264832973480225
+
+../Test_Pics_B11/3OG_Flur394/Object_Test/0_3_f_3OG_Flur394.jpg						1/1			0/0			1/1			[1]/[1]			[1]/[1]		11.821452140808105
+
+../Test_Pics_B11/3OG_Flur394/Object_Test/2_3_f_3OG_Flur394.jpg						1/1			1/0			1/1			[1]/[1]			[1]/[1]		17.698944091796875
+
+../Test_Pics_B11/3OG_Flur394/Object_Test/3_3_h_3OG_Flur394.jpg						1/1			1/1			1/1			[1]/[1]			[1]/[1]		10.877238988876343
+
+../Test_Pics_B11/3OG_Flur394/Object_Test/4_3_h_3OG_Flur394.jpg						1/1			1/0			1/1			[1]/[1]			[1]/[1]		11.832942008972168
+
+../Test_Pics_B11/3OG_R307/Object_Test/0_4_h_3OG_R307.jpg						1/1			0/0			0/0			[1, 0]/[1]			[1, 0]/[1]		11.484380006790161
+
+../Test_Pics_B11/3OG_R307/Object_Test/1_3_h_3OG_R307.jpg						1/1			0/0			1/1			[1]/[1]			[1]/[1]		13.880510807037354
+
+../Test_Pics_B11/3OG_R308/Object_Test/1_4_h_3OG_R308.jpg						1/1			1/1			1/1			[1]/[1]			[1]/[1]		12.265897989273071
+
+../Test_Pics_B11/3OG_R308/Object_Test/0_3_h_3OG_R308.jpg						1/1			0/0			1/1			[1]/[1]			[1]/[1]		11.744837760925293
+
+../Test_Pics_B11/3OG_R310/Object_Test/0_3_h_3OG_R310.jpg						1/1			1/1			1/1			[1]/[1]			[1]/[1]		9.66693115234375
+
+../Test_Pics_B11/EG_Flur092/Object_Test/0_3_h_EG_Flur092.jpg						0/0			0/0			0/0			[0]/[0]			[0]/[0]		6.288258075714111
+
+../Test_Pics_B11/EG_Flur092/Object_Test/1_3_h_EG_Flur092.jpg						1/1			1/1			0/0			[1]/[1]			[1]/[1]		13.820965051651001
+
+../Test_Pics_B11/EG_Flur094/Object_Test/0_5_h_EG_Flur094.jpg						1/1			1/1			1/1			[1]/[1]			[1]/[1]		11.235990047454834
+
+../Test_Pics_B11/EG_Flur094/Object_Test/4_3_f_EG_Flur094.jpg						0/0			0/0			1/1			[0]/[0]			[0]/[0]		13.060751914978027
+
+../Test_Pics_B11/EG_Flur094/Object_Test/1_3_h_EG_Flur094.jpg						1/1			1/1			0/0			[1]/[1]			[1]/[1]		14.980015993118286
+
+../Test_Pics_B11/EG_Flur095/Object_Test/2_3_f_EG_Flur095.jpg						1/1			0/0			1/1			[1, 0]/[1]			[1]/[1]		15.361777305603027
+
+../Test_Pics_B11/EG_Flur095/Object_Test/1_3_f_EG_Flur095.jpg						1/0			1/1			0/0			[1, 0]/[1]			[1, 0]/[1]		8.870215892791748
+
+Sum: 		28                                                       				24/23		18/16		20/18			26/26			26/26			336.9104950428009
+

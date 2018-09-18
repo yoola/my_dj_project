@@ -1,0 +1,60 @@
+Test image 																		SSIM		CORREL		SURF		RANK			TIME
+
+Match 																		Room/Image		Room/Image		Room/Image	Room/Image
+
+../Test_Pics_B11/1OG_Flur192/Entrance_Test/0_3_1OG_Flur192.jpg						0/0			1/1			0/0			[[1]]/[1]		136.28504991531372
+
+../Test_Pics_B11/1OG_Flur193/Entrance_Test/0_3_1OG_Flur193.jpg						0/0			0/0			0/0			[[0]]/[0]		88.72235488891602
+
+../Test_Pics_B11/1OG_Flur194/Entrance_Test/0_3_1OG_Flur194.jpg						0/0			1/1			1/1			[[1]]/[1]		107.90294599533081
+
+../Test_Pics_B11/1OG_Flur194/Entrance_Test/1_3_1OG_Flur194.jpg						1/1			0/0			1/1			[[1]]/[1]		142.55647087097168
+
+../Test_Pics_B11/2OG_Flur292/Entrance_Test/0_3_2OG_Flur292.jpg						1/1			1/1			0/0			[[1]]/[1]		108.83420395851135
+
+../Test_Pics_B11/2OG_Flur292/Entrance_Test/2_3_2OG_Flur292.jpg						1/1			0/0			1/1			[[1]]/[1]		101.05925583839417
+
+../Test_Pics_B11/2OG_Flur292/Entrance_Test/3_3_2OG_Flur292.jpg						1/1			0/0			1/1			[[1]]/[1]		103.28796100616455
+
+../Test_Pics_B11/2OG_Flur295/Entrance_Test/1_3_2OG_Flur295.jpg						1/1			1/1			1/1			[[1]]/[1]		115.88520407676697
+
+../Test_Pics_B11/2OG_Flur295/Entrance_Test/0_3_2OG_Flur295.jpg						1/1			0/0			0/0			[[0]]/[0]		106.30075311660767
+
+../Test_Pics_B11/2OG_Flur296/Entrance_Test/0_3_2OG_Flur296.jpg						1/1			1/1			1/1			[[1]]/[1]		90.82375311851501
+
+../Test_Pics_B11/2OG_Flur297/Entrance_Test/0_3_2OG_Flur297.jpg						1/1			1/1			1/1			[[1]]/[1]		93.91307806968689
+
+../Test_Pics_B11/3OG_Flur392/Entrance_Test/1_3_3OG_Flur392.jpg						1/1			1/1			1/1			[[1]]/[1]		90.82863092422485
+
+../Test_Pics_B11/3OG_Flur392/Entrance_Test/0_3_3OG_Flur392.jpg						1/1			0/0			1/1			[[1, 1]]/[1, 1]		84.93372178077698
+
+../Test_Pics_B11/3OG_Flur394/Entrance_Test/0_6_3OG_Flur394.jpg						0/0			0/0			0/0			[[0]]/[0]		94.1659767627716
+
+../Test_Pics_B11/3OG_Flur394/Entrance_Test/1_3_3OG_Flur394.jpg						1/1			0/0			0/0			[[1]]/[1]		94.03705716133118
+
+../Test_Pics_B11/3OG_Flur394/Entrance_Test/0_5_3OG_Flur394.jpg						1/1			1/1			1/1			[[1]]/[1]		97.4655249118805
+
+../Test_Pics_B11/3OG_R307/Entrance_Test/0_3_3OG_R307.jpg						1/1			0/0			0/0			[[1, 0]]/[1]		170.24991393089294
+
+../Test_Pics_B11/3OG_R308/Entrance_Test/0_3_3OG_R308.jpg						0/0			0/0			0/0			[[0]]/[0]		160.56417989730835
+
+../Test_Pics_B11/3OG_R310/Entrance_Test/0_3_3OG_R310.jpg						0/0			0/0			0/0			[[0]]/[0]		91.10113525390625
+
+../Test_Pics_B11/EG_Flur092/Entrance_Test/4_3_EG_Flur092.jpg						0/0			1/1			1/1			[[0, 1]]/[0]		99.03743100166321
+
+../Test_Pics_B11/EG_Flur092/Entrance_Test/0_3_EG_Flur092.jpg						0/0			0/0			1/1			[[1]]/[1]		137.55541229248047
+
+../Test_Pics_B11/EG_Flur092/Entrance_Test/1_3_EG_Flur092.jpg						1/1			0/0			0/0			[[1]]/[1]		115.38988971710205
+
+../Test_Pics_B11/EG_Flur092/Entrance_Test/2_3_EG_Flur092.jpg						0/0			0/0			1/1			[[0, 0, 0]]/[0]		145.7880311012268
+
+../Test_Pics_B11/EG_Flur094/Entrance_Test/0_3_EG_Flur094.jpg						1/1			1/1			1/1			[[1]]/[1]		94.2030200958252
+
+../Test_Pics_B11/EG_Flur094/Entrance_Test/1_3_EG_Flur094.jpg						1/1			1/1			1/1			[[1]]/[1]		99.04010605812073
+
+../Test_Pics_B11/EG_Flur095/Entrance_Test/0_3_EG_Flur095.jpg						1/1			1/1			0/0			[[1]]/[1]		118.06764698028564
+
+../Test_Pics_B11/EG_Flur095/Entrance_Test/1_3_EG_Flur095.jpg						1/1			1/1			1/1			[[1]]/[1]		105.55398797988892
+
+Sum: 		27                                                       				18/18		13/13		16/16		21/20			2993.5526967048645
+

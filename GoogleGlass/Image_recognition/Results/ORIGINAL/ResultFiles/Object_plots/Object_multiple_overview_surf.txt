@@ -1,0 +1,12 @@
+Test image 																		SSIM		CORREL		SURF		RANK			TIME
+
+Match 																		Room/Image		Room/Image	Room/Image	Room/Image
+
+SURF 300: Sum: 		28                                                       	14/13		13/10		13/8		17/16			28521.22806572914
+
+SURF 400: Sum: 		28                                                       	14/14		14/10		14/10		19/16			1489.788488149643
+
+SURF 500: Sum: 		28                                                       	14/14		14/10		14/8		20/18			1142.7973787784576
+
+SURF 600: Sum: 		28                                                       	15/15		14/10		18/14		19/17			934.5490243434906
+
