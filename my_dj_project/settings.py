@@ -28,12 +28,13 @@ SECRET_KEY = '88fa=s8v3(_ndhyqnab&hr^07p46z9i0q=^r*dni0d+9z(k+c5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',
     'GoogleGlass.apps.GoogleglassConfig',
     'django.contrib.admin',
     'django.contrib.auth',

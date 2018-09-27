@@ -5,5 +5,5 @@ from GoogleGlass.models import Document
 class DocumentForm(forms.ModelForm):
     class Meta:
         model = Document
-        fields = ('description', 'document', )
+        fields = ('floor', 'room', 'object_type','status','document')
 

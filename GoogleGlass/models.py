@@ -10,7 +10,11 @@ import os
 #     return os.path.join(path, format)
 
 class Document(models.Model):
-    description = models.CharField(max_length=255, blank=True)
-    document = models.FileField(upload_to='documents/') # upload_to=update_filename
-    uploaded_at = models.DateTimeField(auto_now_add=True)
-
+	floor = models.CharField(max_length=10, blank=True)
+	room = models.CharField(max_length=10, blank=True)
+	object_type = models.CharField(max_length=2, blank=True)
+	status = models.CharField(max_length=10, blank=True)
+	document = models.ImageField(upload_to='documents/', default='documents/None/No_images.jpg/')
+	uploaded_at = models.DateTimeField(auto_now_add=True)
+	#document = models.FileField(upload_to='documents/') # upload_to=update_filename
+	

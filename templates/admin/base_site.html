@@ -1,5 +1,5 @@
 {% extends "admin/base.html" %}
-
+{%csrf_token%}
 {% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
 {% block branding %}
 <h1 id="site-name">{% trans 'GoogleGlass Webserver' %}</h1>

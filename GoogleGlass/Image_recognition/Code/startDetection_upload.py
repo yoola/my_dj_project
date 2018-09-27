@@ -28,14 +28,6 @@ from GoogleGlass.Image_recognition.Code.crop_that_shit import crop_img_for_hist,
 from GoogleGlass.Image_recognition.Code.testfiles1 import folders_object, folders_object_test
 from GoogleGlass.Image_recognition.Code.testfiles1 import sift_keypoints_file_obj, surf_keypoints_file_obj_600, surf128_keypoints_file_obj_600, hist_file_obj, hist_file_obj_blur
 
-# from sort_count_funcs import sort_matches, count_matches, find_testpath_position, get_most_freq_matches
-# from plot_funcs import plot_best_matches, plot_diagram_matches, plot_diagram_match_position
-# from result_paths import resultOverview_path, result_multiple_rounds_sift
-# from help_funcs import get_image_object_id, get_sums_rank, cut_image_at_sift_keypoints
-# from pickle_funcs import unpickle_keypoints
-# from color_balance import simplest_cb
-# from crop_that_shit import crop_img_for_hist, calc_best_hist
-
 
 img_path = '/Test_Pics_B11/'
 MIN_MATCH_COUNT_matches = 20
@@ -62,10 +54,13 @@ def find_best_match(test_img_path, keypoints_file, hist_file, folders, predicted
   hist1 = cv2.calcHist([blur1],[0],None,[256],[0,256])  
   #kp2, des2 = sift.detectAndCompute(test_img1,None)
   #test_img_hists = hist_tiles(test_img1)
+  #
 
   for path in folders:
 
     for infile in glob.glob( os.path.join(path, '*.jpg') ):
+
+      print("infile: ", infile)
 
       if get_image_object_id(infile) == predicted_obj or get_image_object_id(infile) == "hf":
 
@@ -231,7 +226,7 @@ def run_script(test_path, predicted_obj, folder, keypoints_file, hist_file):
   testpath_pos_correl = []
   testpath_pos_rank = [] 
   testpath_pos_counter = []
-  sum_results_str = str("")
+
 
   # script_overview = open(resultOverview_path, 'w')
   # script_overview.write("Test image \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSSIM\t\tCORREL\t\tSURF\t\tRANK\t\tCOUNTER\t\t\tTIME\n\n")
@@ -272,17 +267,18 @@ def run_script(test_path, predicted_obj, folder, keypoints_file, hist_file):
     testpath_pos_correl.append(testpath_pos[2])
     testpath_pos_rank.append(testpath_pos[3])
 
-    sum_results_str = sum_results_str + plot_best_matches(best_matches, test_path)
+    sum_results_str = plot_best_matches(best_matches, test_path)
     testpaths.append(test_path)
 
     exe_time = exe_time +path_time
+    return sum_results_str
   else:
-    print(str(test_path)+" does not exist.")
+    return str(test_path)+" does not exist."
 
   #[sum_rank2, sum_id_rank2, sum_id_rank3] = get_sums_rank(sum_rank, sum_id_rank)
   #[sum_counter2, sum_id_counter2, sum_id_counter3] = get_sums_rank(sum_counter, sum_id_counter)
 
-  print("execution time: ", exe_time)
+  #print("execution time: ", exe_time)
   # sum_results = str("Sum: \t\t"+str(count_testpaths)+((len_testpath-5)*" ")+"\t\t\t\t"
   #               + str(sum_ssim)+"/"+str(np.sum(sum_id_ssim))+"\t\t"+  str(sum_correl)+"/"
   #               +str(np.sum(sum_id_correl))+"\t\t"+  str(sum_surf)+"/"+str(np.sum(sum_id_surf))+"\t\t\t"
@@ -295,7 +291,7 @@ def run_script(test_path, predicted_obj, folder, keypoints_file, hist_file):
   #plot_diagram_matches(testpaths, sum_id_rank3, sum_id_ssim, sum_id_correl, sum_id_surf)
   #plot_diagram_match_position(testpaths, testpath_pos_dist, testpath_pos_ssim, testpath_pos_correl, testpath_pos_rank)
 
-  return sum_results_str
+  
 
   
 

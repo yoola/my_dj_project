@@ -1,0 +1,19 @@
+Test image: /Users/jula/Github/my_dj_project/GoogleGlass/media/documents/IMG_20180821_144449253.jpg
+
+Best matches by rank: ['/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R307/Object/1_1_h_3OG_R307.jpg']
+
+Best matches by SURF distance: /Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R307/Object/1_1_h_3OG_R307.jpg
+
+Best matches ssim: /Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R307/Object/1_1_h_3OG_R307.jpg
+
+Best matches correl: /Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R307/Object/1_1_h_3OG_R307.jpg
+
+Sorted by ssim: [('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R307/Object/1_1_h_3OG_R307.jpg', 0.7154914508359056, 1.0458805486559868, 0.5001673532537986), ('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R307/Object/1_0_h_3OG_R307.jpg', 0.6490746832754978, 1.0497250743210316, 0.20198787561940476)]
+
+Sorted by correl: [('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R307/Object/1_1_h_3OG_R307.jpg', 0.7154914508359056, 1.0458805486559868, 0.5001673532537986), ('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R307/Object/1_0_h_3OG_R307.jpg', 0.6490746832754978, 1.0497250743210316, 0.20198787561940476)]
+
+Sorted by SURF distance: [('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R307/Object/1_1_h_3OG_R307.jpg', 0.7154914508359056, 1.0458805486559868, 0.5001673532537986), ('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R307/Object/1_0_h_3OG_R307.jpg', 0.6490746832754978, 1.0497250743210316, 0.20198787561940476)]
+
+Sorted by ranks: [('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R307/Object/1_1_h_3OG_R307.jpg', 1.0), ('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R307/Object/1_0_h_3OG_R307.jpg', 2.0)]
+------------------------------------------------------------------------
+
