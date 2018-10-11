@@ -273,7 +273,7 @@ def run_script(test_path, predicted_obj, folder, keypoints_file, hist_file):
     exe_time = exe_time +path_time
     return sum_results_str
   else:
-    return str(test_path)+" does not exist."
+    return [str(test_path)+" does not exist."]
 
   #[sum_rank2, sum_id_rank2, sum_id_rank3] = get_sums_rank(sum_rank, sum_id_rank)
   #[sum_counter2, sum_id_counter2, sum_id_counter3] = get_sums_rank(sum_counter, sum_id_counter)

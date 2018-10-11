@@ -18,3 +18,7 @@ class Document(models.Model):
 	uploaded_at = models.DateTimeField(auto_now_add=True)
 	#document = models.FileField(upload_to='documents/') # upload_to=update_filename
 	
+class Object(models.Model):
+	object_id = models.CharField(max_length=10, blank=True)
+	object_type = models.CharField(max_length=10, blank=True)
+	status = models.CharField(max_length=10, blank=True)

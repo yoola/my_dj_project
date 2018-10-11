@@ -1,0 +1,19 @@
+Test image: /Users/jula/Github/my_dj_project/GoogleGlass/media/documents/IMG_20180821_144431694.jpg
+
+Best matches by rank: ['/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R310/Object/0_2_h_3OG_R310.jpg']
+
+Best matches by SURF distance: /Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R310/Object/0_2_h_3OG_R310.jpg
+
+Best matches ssim: /Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R310/Object/0_2_h_3OG_R310.jpg
+
+Best matches correl: /Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R310/Object/0_2_h_3OG_R310.jpg
+
+Sorted by ssim: [('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R310/Object/0_2_h_3OG_R310.jpg', 0.511809537570759, 1.5509065389633179, 0.18735328935005377), ('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/EG_Flur095/Object/0_0_h_EG_Flur095.jpg', 0.3800048737546785, 2.0607422776520252, -0.021537063841656164)]
+
+Sorted by correl: [('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R310/Object/0_2_h_3OG_R310.jpg', 0.511809537570759, 1.5509065389633179, 0.18735328935005377), ('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/EG_Flur095/Object/0_0_h_EG_Flur095.jpg', 0.3800048737546785, 2.0607422776520252, -0.021537063841656164)]
+
+Sorted by SURF distance: [('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R310/Object/0_2_h_3OG_R310.jpg', 0.511809537570759, 1.5509065389633179, 0.18735328935005377), ('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/EG_Flur095/Object/0_0_h_EG_Flur095.jpg', 0.3800048737546785, 2.0607422776520252, -0.021537063841656164)]
+
+Sorted by ranks: [('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R310/Object/0_2_h_3OG_R310.jpg', 1.0), ('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/EG_Flur095/Object/0_0_h_EG_Flur095.jpg', 2.0)]
+------------------------------------------------------------------------
+

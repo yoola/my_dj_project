@@ -1,0 +1,19 @@
+Test image: /Users/jula/Github/my_dj_project/GoogleGlass/media/documents/20181005_195307_469.jpg
+
+Best matches by rank: []
+
+Best matches by SURF distance: 
+
+Best matches ssim: 
+
+Best matches correl: 
+
+Sorted by ssim: []
+
+Sorted by correl: []
+
+Sorted by SURF distance: []
+
+Sorted by ranks: []
+------------------------------------------------------------------------
+

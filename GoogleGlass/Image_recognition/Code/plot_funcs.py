@@ -13,7 +13,8 @@ def plot_best_matches(best_matches, test_img_path):
   print('best_matches:',best_matches)
   print('\n')
 
-  sum_results_str = str("")
+  #sum_results_str = str("")
+  sum_results_str = []
 
   if not len(best_matches[0])==0:
     best_matches.append(test_img_path)
@@ -35,8 +36,10 @@ def plot_best_matches(best_matches, test_img_path):
           #cut = find_second_last(best_matches[0][j], '/')
           #a.set_title(titles[i]+str(j)+': '+str(best_matches[0][j][cut:]))
           matches1 = str(titles[i])+str(j)+ "Path: "+ str(best_matches[0][j]+"\n")
+          matches1 = str(best_matches[0][j])
           print(matches1)
-          sum_results_str = sum_results_str + matches1
+          sum_results_str.append(matches1)
+          #sum_results_str = sum_results_str + matches1
           #plt.axis('off')
           #plt.imshow(img)
       else:
@@ -46,7 +49,7 @@ def plot_best_matches(best_matches, test_img_path):
         #a.set_title(titles[i]+': '+str(best_matches[i][cut:]))
         matches2 = str(titles[i])+ "Path: " + str(best_matches[i]+"\n")
         print(matches2)
-        sum_results_str = sum_results_str + matches2
+        #sum_results_str = sum_results_str + matches2
 
         #plt.axis('off')
         #plt.imshow(img)

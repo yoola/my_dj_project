@@ -6,7 +6,6 @@ from GoogleGlass.Image_recognition.Code.startDetection_upload import main
 from GoogleGlass.models import Document
 from GoogleGlass.forms import DocumentForm
 
-from rest_framework.response import Response
 
 def home(request):
 
