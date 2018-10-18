@@ -5,15 +5,25 @@ from rest_framework import status
 from GoogleGlass.serializers import DocumentSerializer
 
 from GoogleGlass.models import Document
+from GoogleGlass.models import Object
+
 from GoogleGlass.forms import DocumentForm
 from rest_framework.parsers import FileUploadParser
 from GoogleGlass.Image_recognition.Code.startDetection_upload import main
 
 import base64
 import os.path
+import os
+import shutil
+import glob
+
+dir_source = r"/Users/jula/Github/my_dj_project/GoogleGlass/media/documents/"
+dir_database = r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/"
 
 # HTTPIE: http -f POST http://192.168.178.20:8000/GoogleGlass/documents/ floor='3OG' room='310' document@310try.jpg
 # list all Documents or create a new one
+def getID(objectID):
+	return((objectID.split("("))[1].split(")")[0])
 
 class DocumentList(APIView):
 
@@ -23,46 +33,91 @@ class DocumentList(APIView):
 		return Response(serializer.data)
 
 	def post(self, request, format=None):
-		#print("I'm in POST")
-		#print(request.body)
+		print("I'm in POST")
 		serializer = DocumentSerializer(data=request.data)
+
 
 		if serializer.is_valid():
 			
-			imageName = serializer.validated_data.get('document')
-			print("I'm in Post")
-			
-			dir_ = "/Users/jula/Github/my_dj_project/GoogleGlass/media/documents/"
-			imagepath_ = dir_+str(imageName)
+			serializer.save()		
+			toDo = serializer.validated_data.get('todo')
 
-			#d = Document.objects.get(document=str("documents/"+str(imageName)))
-			#print("d: ",d)
-			
-			if os.path.isfile(imagepath_):
-				print("It is in")
-				d = Document.objects.get(document=str("documents/"+str(imageName)))
-				new_status = serializer.validated_data.get('status')
-				d.status = new_status
-				d.save()
-				return Response((d.status, 'hi'), status=status.HTTP_201_CREATED)
+			# send an existent object_id
+			# http -f POST http://192.168.178.20:8000/GoogleGlass/documents/ object_type='h' object_id='0_h_1OG_Flur192' document@192try.jpg todo='process'
+			if toDo == 'process':
+				#
+				print("process this image")
+				imageName = serializer.validated_data.get('document')
+				imagePath = dir_source+str(imageName)
+				objType = serializer.validated_data.get('object_type')
+				print("objType: ", objType)
+				context = main(imagePath, str(objType))
+				context = context[0]
+				pos = context.rfind("/")
+				context_id = context[pos+1:]
+				doc = Document.objects.get(document=context_id)
+				objID2 = getID(str(doc.object_id))
+				obj = Object.objects.get(object_id=objID2)
 
-			else:
-				serializer.save()
-				print("It is noooot")
-				imageType = serializer.validated_data.get('object_type')
-			
-				imagePath = "/Users/jula/Github/my_dj_project/GoogleGlass/media/documents/"+str(imageName)
-				imagePath2 = "/Users/jula/Github/my_dj_project/GoogleGlass/media/documents/310try.jpg"
-				context = main(imagePath, str(imageType))
-				print(context)
-
-				with open(str(context[0]), "rb") as image_file:
+				with open(str(context), "rb") as image_file:
 					encoded_string = base64.b64encode(image_file.read())
-					#print(encoded_string)
-				return Response(serializer.data, status=status.HTTP_201_CREATED)
-			#return Response(encoded_string, status=status.HTTP_201_CREATED)
+				#return Response(serializer.data, status=status.HTTP_201_CREATED)
+				return Response((encoded_string, obj.status, obj.object_id), status=status.HTTP_201_CREATED)
+	
+			# send back matches image with status
+			# http -f POST http://192.168.178.20:8000/GoogleGlass/documents/ todo='editstatus' edit_status_to='FUNNY' object_id='0_h_1OG_Flur192'
+			elif toDo == 'editstatus':	
+				editStatusTo = serializer.validated_data.get('edit_status_to')
+				objID = serializer.validated_data.get('object_id')
+				objID2 = getID(str(objID))
+				print("id: ",objID2)
+				obj = Object.objects.get(object_id=objID2)
+				obj.status = editStatusTo
+				obj.save()
+				return Response((editStatusTo, objID2), status=status.HTTP_201_CREATED)
+			# http -f POST http://192.168.178.20:8000/GoogleGlass/documents/ todo='addimage' object_id='0_h_1OG_Flur192'
+			elif toDo == 'addimage':
+				objID = serializer.validated_data.get('object_id')
+				objID2 = getID(str(objID))
+				obj = Object.objects.get(object_id=objID2)
+				newName = "0_4"+objID2[1:]+".jpg"
+				print(newName)
+				# save document in sqlite3 database
+				doc = Document(id=None, document =newName, object_id=objID)
+				doc.save()
+				localPath =dir_database+ str(obj.floor)+"_"+str(obj.room)+"/Object/"#+newName
+				for infile in glob.glob( os.path.join(dir_source, '*.jpg') ):
+					shutil.move(infile,localPath)
+				cut = infile.rfind("/")
+				oldName = infile[cut+1:]
+				# save document in local database
+				print(localPath+str(oldName))
+				os.rename(localPath+str(oldName), localPath+newName)
+
+				for infile in glob.glob( os.path.join(dir_source, '*.jpg') ):
+					os.remove(infile)
+
+				doc_old1 = Document.objects.filter(document="documents/"+oldName)
+				doc_old2 = Document.objects.filter(document="documents/None/No_images.jpg/")
+				doc_old1.delete()
+				doc_old2.delete()
+				return Response(("Add image with object id: "+ objID2), status=status.HTTP_201_CREATED)
+			# http -f POST http://192.168.178.20:8000/GoogleGlass/documents/ todo='deleteimage' object_id='0_h_1OG_Flur192'
+			elif toDo == 'deleteimage':
+				for infile in glob.glob( os.path.join(dir_source, '*.jpg') ):
+					oldName = infile
+					os.remove(infile)
+				cut = infile.rfind("/")
+				oldName = oldName[cut+1:]
+				doc_old1 = Document.objects.filter(document="documents/"+oldName)
+				doc_old2 = Document.objects.filter(document="documents/None/No_images.jpg/")
+				doc_old1.delete()
+				doc_old2.delete()
+					
+				return Response(("Deleted image."), status=status.HTTP_201_CREATED)
+			
+				
+
 			#return Response(serializer.data, status=status.HTTP_201_CREATED)
-		else:
-			return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
+		
+		return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

@@ -8,4 +8,4 @@ class DocumentSerializer(serializers.ModelSerializer):
 		# returns only the status when requesting information about the Document
 		# variations: fields = ('status', 'room'), field = '__all__' 
 		#fields = ('__all__')
-		fields = ('floor', 'room', 'object_type','status','document',)
+		fields = ('object_id','object_type','document','todo','edit_status_to')

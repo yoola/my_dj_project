@@ -37,10 +37,10 @@ folders_entrance = [
 
 
 folders_object = [
-				        # r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/1OG_Flur192/Object/",
-				        # r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/1OG_Flur193/Object/", 
-				        # r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/1OG_Flur194/Object/" ,
-				        # r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/2OG_Flur292/Object/"]
+				        r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/1OG_Flur192/Object/",
+				        r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/1OG_Flur193/Object/", 
+				        r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/1OG_Flur194/Object/" ,
+				        r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/2OG_Flur292/Object/"]
 				        # r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/2OG_Flur295/Object/",
 				        # r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/2OG_Flur296/Object/", 
 				        # r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/2OG_Flur297/Object/", 
@@ -48,10 +48,10 @@ folders_object = [
             #   	r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_Flur394/Object/", 
             #   	r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R307/Object/", 
             #   	r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R308/Object/",
-              	r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R310/Object/", 
-              	r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/EG_Flur092/Object/",
-              	r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/EG_Flur094/Object/",
-              	r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/EG_Flur095/Object/"]
+            #   	r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/3OG_R310/Object/", 
+            #   	r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/EG_Flur092/Object/",
+            #   	r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/EG_Flur094/Object/",
+            #   	r"/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/EG_Flur095/Object/"]
 
 #folders_object_test = ["1OG_Flur192/Object_Test/","1OG_Flur194/Object_Test/"]
 
