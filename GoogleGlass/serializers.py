@@ -9,3 +9,10 @@ class DocumentSerializer(serializers.ModelSerializer):
 		# variations: fields = ('status', 'room'), field = '__all__' 
 		#fields = ('__all__')
 		fields = ('object_id','object_type','document','todo','edit_status_to')
+
+
+class Processor(object):
+    def __init__(self, email, content, created=None):
+        self.email = email
+        self.content = content
+        self.created = created or datetime.now()

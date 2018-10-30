@@ -14,7 +14,7 @@ def home(request):
     if request.method == "POST":
         image_name = request.POST.get("docSelect", None)
         image_obj = request.POST.get("docSelect2", None)
-        context = main("/Users/jula/Github/my_dj_project/GoogleGlass/media/"+image_name, image_obj)
+        context = main("/Users/jula/Github/my_dj_project/GoogleGlass/media/"+image_name)
         return render(request, 'GoogleGlass/image_results.html', {'context': context})
 
     return render(request, 'GoogleGlass/home.html', { 'documents': documents })

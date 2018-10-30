@@ -19,7 +19,8 @@ class Object(models.Model):
 
 
 class Document(models.Model):
-	object_id = models.ForeignKey(Object, default='DEFAULT VALUE', on_delete=models.CASCADE)
+	object_id = models.CharField(max_length=20, blank=True)
+	#object_id = models.ForeignKey(Object, default='DEFAULT VALUE', on_delete=models.CASCADE)
 	object_type = models.CharField(max_length=10, blank=True)
 	document = models.ImageField(upload_to='documents/', default='documents/None/No_images.jpg/')
 	uploaded_at = models.DateTimeField(auto_now_add=True)

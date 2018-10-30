@@ -40,7 +40,7 @@ surf = cv2.xfeatures2d.SURF_create(hessianThreshold = 600)
 
 
 
-def find_best_match(test_img_path, keypoints_file, hist_file, folders, predicted_obj):
+def find_best_match(test_img_path, keypoints_file, hist_file, folders):
 
   all_chosen_files = [] # includes all images with their ssim and distance to the test image
   # imread rgb image for histogram
@@ -62,93 +62,86 @@ def find_best_match(test_img_path, keypoints_file, hist_file, folders, predicted
 
       print("infile: ", infile)
 
-      if get_image_object_id(infile) == predicted_obj or get_image_object_id(infile) == "hf":
-
-        print(infile)
-         # imread grey scale image
-        img2 = cv2.imread(infile,0)
+      # imread grey scale image
+      img2 = cv2.imread(infile,0)
        
-        # get stored keypoints
-        infile_repl = infile.replace("/", "+")
-        keypoints_file1 = keypoints_file+infile_repl[63:-4]+".p"
-        print("keypoints_file1:", keypoints_file1)
+      # get stored keypoints
+      infile_repl = infile.replace("/", "+")
+      keypoints_file1 = keypoints_file+infile_repl[63:-4]+".p"
+      print("keypoints_file1:", keypoints_file1)
+
+      if os.path.isfile(keypoints_file1):
+        keypoints_database = pickle.load( open(keypoints_file1, "rb" ) )
+        kp1, des1 = unpickle_keypoints(keypoints_database)
+      else: 
+        kp1, des1 = surf.detectAndCompute(img2,None)
+        #kp1, des1 = sift.detectAndCompute(img2,None)
+        print("No stored KeyPoints available. Calculating keypoints...")
+
+
+      # kpTest, desTest = surf.detectAndCompute(img2,None)
+      # http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_matcher/py_matcher.html
+      # FLANN parameters
+      FLANN_INDEX_KDTREE = 0
+      index_params = dict(algorithm = FLANN_INDEX_KDTREE, trees = 5)
+      search_params = dict(checks=50)   # higher values gives better precision, but also take more time
+      flann = cv2.FlannBasedMatcher(index_params,search_params)
+
+
+      matches = flann.knnMatch(des1,des2,k=2)
+
+
+
+      #################
+      ################
         
-
-        if os.path.isfile(keypoints_file1):
-          keypoints_database = pickle.load( open(keypoints_file1, "rb" ) )
-          kp1, des1 = unpickle_keypoints(keypoints_database)
-        else: 
-          kp1, des1 = surf.detectAndCompute(img2,None)
-          #kp1, des1 = sift.detectAndCompute(img2,None)
-          print("No stored KeyPoints available. Calculating keypoints...")
-
-
-        # kpTest, desTest = surf.detectAndCompute(img2,None)
-        # http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_matcher/py_matcher.html
-        # FLANN parameters
-        FLANN_INDEX_KDTREE = 0
-        index_params = dict(algorithm = FLANN_INDEX_KDTREE, trees = 5)
-        search_params = dict(checks=50)   # higher values gives better precision, but also take more time
-        flann = cv2.FlannBasedMatcher(index_params,search_params)
-
-
-        matches = flann.knnMatch(des1,des2,k=2)
-
-
-
-        #################
-        ################
-        
-        # store all the good matches as per Lowe's ratio test.
-        good = []
-        #print("matches: ", len(matches))
-        for m,n in matches:
-          if m.distance < 0.7*n.distance:
-            good.append(m)
+      # store all the good matches as per Lowe's ratio test.
+      good = []
+      #print("matches: ", len(matches))
+      for m,n in matches:
+        if m.distance < 0.7*n.distance:
+          good.append(m)
             #print("m: ", m)
             #print("n: ", n)
-
-
-        if len(good)>MIN_MATCH_COUNT_matches:
-
-            src_pts = np.float32([ kp1[m.queryIdx].pt for m in good ]).reshape(-1,1,2)
-            dst_pts = np.float32([ kp2[m.trainIdx].pt for m in good ]).reshape(-1,1,2)
-
-            M, mask = cv2.findHomography(src_pts, dst_pts, cv2.RANSAC,5.0)
-            matchesMask = mask.ravel().tolist()
-
-            inliers = []
-            for i in range(0, len(good)):
-              if matchesMask[i] == 1:
-                inliers.append(good[i])
             
-         
+      if len(good)>MIN_MATCH_COUNT_matches:
 
-            if len(inliers) >= MIN_MATCH_COUNT_inliers:
+        src_pts = np.float32([ kp1[m.queryIdx].pt for m in good ]).reshape(-1,1,2)
+        dst_pts = np.float32([ kp2[m.trainIdx].pt for m in good ]).reshape(-1,1,2)
 
-              inlier_distances = []
-              for i in inliers:
-                inlier_distances.append(i.distance)
+        M, mask = cv2.findHomography(src_pts, dst_pts, cv2.RANSAC,5.0)
+        matchesMask = mask.ravel().tolist()
 
-              sorted_distSum = sorted(inlier_distances)
-              sum_sorted_distSum = sum(sorted_distSum[:10])
-
-              print("sum_sorted_distSum: ", sum_sorted_distSum)
-
-
+        inliers = []
+        for i in range(0, len(good)):
+          if matchesMask[i] == 1:
+            inliers.append(good[i])
 
 
-              h,w = img2.shape
+        if len(inliers) >= MIN_MATCH_COUNT_inliers:
+
+          inlier_distances = []
+          for i in inliers:
+            inlier_distances.append(i.distance)
+            sorted_distSum = sorted(inlier_distances)
+            sum_sorted_distSum = sum(sorted_distSum[:10])
+
+          print("sum_sorted_distSum: ", sum_sorted_distSum)
+
+
+
+
+              #h,w = img2.shape
               #pts = np.float32([ [0,0],[0,h-1],[w-1,h-1],[w-1,0] ]).reshape(-1,1,2)
               #dst = cv2.perspectiveTransform(pts,M)
 
               #img2 = cv2.polylines(img2,[np.int32(dst)],True,255,3, cv2.LINE_AA)
 
-              if img2.shape != img1.shape:
-                img1=cv2.resize(img1,(img2.shape[1],img2.shape[0]))
+          if img2.shape != img1.shape:
+            img1=cv2.resize(img1,(img2.shape[1],img2.shape[0]))
 
-              # apply ssim
-              ssim_const = ssim(img1, img2, data_range = img2.max() - img2.min())
+            # apply ssim
+            ssim_const = ssim(img1, img2, data_range = img2.max() - img2.min())
               
               #####TRY CROP IMAGE VERSION ###
               
@@ -176,27 +169,26 @@ def find_best_match(test_img_path, keypoints_file, hist_file, folders, predicted
               # plt.imshow(img2)
               # plt.show()
               ####
+              #
+            hist_file1 = hist_file+infile_repl[3:-4]+".p"
 
-              hist_file1 = hist_file+infile_repl[3:-4]+".p"
+            if os.path.isfile(hist_file1):
+              hist2 = pickle.load( open(hist_file1, "rb" ) )
+            else: 
+              hist2 = cv2.calcHist([img2],[0],None,[256],[0,256])
 
-              if os.path.isfile(hist_file1):
-                hist2 = pickle.load( open(hist_file1, "rb" ) )
-              else: 
-                hist2 = cv2.calcHist([img2],[0],None,[256],[0,256])
-              
-              correl_ = cv2.compareHist(hist1,hist2,cv2.HISTCMP_CORREL)
-              print("correl_: ", correl_)
+            correl_ = cv2.compareHist(hist1,hist2,cv2.HISTCMP_CORREL)
+            print("correl_: ", correl_)
 
-              all_chosen_files.append((infile, ssim_const, sum_sorted_distSum, correl_))
+            all_chosen_files.append((infile, ssim_const, sum_sorted_distSum, correl_))
 
-
-            else:
-              print("Not enough matches are found - %d/%d" % (len(inliers),MIN_MATCH_COUNT_inliers))
-              matchesMask = None
+          else:
+            print("Not enough matches are found - %d/%d" % (len(inliers),MIN_MATCH_COUNT_inliers))
+            matchesMask = None
 
         else:
-              print("Not enough matches are found - %d/%d" % (len(good),MIN_MATCH_COUNT_matches))
-              matchesMask = None
+          print("Not enough matches are found - %d/%d" % (len(good),MIN_MATCH_COUNT_matches))
+          matchesMask = None
 
         ################
         ###############        
@@ -204,7 +196,7 @@ def find_best_match(test_img_path, keypoints_file, hist_file, folders, predicted
   return all_chosen_files
 
 
-def run_script(test_path, predicted_obj, folder, keypoints_file, hist_file):
+def run_script(test_path, folder, keypoints_file, hist_file):
 
   exe_time = 0
   # sum_ssim = 0
@@ -245,7 +237,7 @@ def run_script(test_path, predicted_obj, folder, keypoints_file, hist_file):
     count_testpaths = count_testpaths + 1
     test_img = cv2.imread(test_path)      
 
-    all_files = find_best_match(test_path, keypoints_file, hist_file, folder, predicted_obj) 
+    all_files = find_best_match(test_path, keypoints_file, hist_file, folder) 
     [best_matches, testpath_pos]  = sort_matches(all_files, test_path)
     paths_counter = get_most_freq_matches(best_matches)
     path_time = time.time() - start_time
@@ -295,13 +287,13 @@ def run_script(test_path, predicted_obj, folder, keypoints_file, hist_file):
 
   
 
-def main(test_file, predicted_obj):
+def main(test_file):
 
     #from testfiles5 import folders_entrance, folders_entrance_test
     #from testfiles1 import folders_object, folders_object_test
     #from testfile5 import sift_keypoints_file_entrance, surf_keypoints_file_entrance_600
     #from testfiles1 import sift_keypoints_file_obj, surf_keypoints_file_obj_600, surf128_keypoints_file_obj_600, hist_file_obj, hist_file_obj_blur
-    sum_ =run_script(test_file, predicted_obj, folders_object, surf_keypoints_file_obj_600, hist_file_obj_blur)
+    sum_ =run_script(test_file, folders_object, surf_keypoints_file_obj_600, hist_file_obj_blur)
     return(sum_)
 
    
