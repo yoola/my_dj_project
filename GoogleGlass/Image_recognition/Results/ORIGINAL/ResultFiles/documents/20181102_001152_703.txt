@@ -1,0 +1,19 @@
+Test image: /Users/jula/Github/my_dj_project/GoogleGlass/media/documents/20181102_001152_703.jpg
+
+Best matches by rank: ['/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/1OG_Flur192/Object/0_0_h_1OG_Flur192.jpg']
+
+Best matches by SURF distance: /Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/1OG_Flur192/Object/0_2_h_1OG_Flur192.jpg
+
+Best matches ssim: /Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/1OG_Flur192/Object/0_0_h_1OG_Flur192.jpg
+
+Best matches correl: /Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/1OG_Flur192/Object/0_0_h_1OG_Flur192.jpg
+
+Sorted by ssim: [('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/1OG_Flur192/Object/0_0_h_1OG_Flur192.jpg', 0.5421674556275297, 1.6105020716786385, 0.36675568032261047), ('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/1OG_Flur192/Object/0_1_h_1OG_Flur192.jpg', 0.5174206461561046, 1.3332932330667973, 0.27528832045225604), ('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/1OG_Flur192/Object/0_2_h_1OG_Flur192.jpg', 0.4494059413833168, 1.22135778516531, 0.1923874849456036)]
+
+Sorted by correl: [('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/1OG_Flur192/Object/0_0_h_1OG_Flur192.jpg', 0.5421674556275297, 1.6105020716786385, 0.36675568032261047), ('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/1OG_Flur192/Object/0_1_h_1OG_Flur192.jpg', 0.5174206461561046, 1.3332932330667973, 0.27528832045225604), ('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/1OG_Flur192/Object/0_2_h_1OG_Flur192.jpg', 0.4494059413833168, 1.22135778516531, 0.1923874849456036)]
+
+Sorted by SURF distance: [('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/1OG_Flur192/Object/0_2_h_1OG_Flur192.jpg', 0.4494059413833168, 1.22135778516531, 0.1923874849456036), ('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/1OG_Flur192/Object/0_1_h_1OG_Flur192.jpg', 0.5174206461561046, 1.3332932330667973, 0.27528832045225604), ('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/1OG_Flur192/Object/0_0_h_1OG_Flur192.jpg', 0.5421674556275297, 1.6105020716786385, 0.36675568032261047)]
+
+Sorted by ranks: [('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/1OG_Flur192/Object/0_0_h_1OG_Flur192.jpg', 1.0), ('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/1OG_Flur192/Object/0_1_h_1OG_Flur192.jpg', 2.0), ('/Users/jula/Github/my_dj_project/GoogleGlass/Image_recognition/Test_Pics_B11/1OG_Flur192/Object/0_2_h_1OG_Flur192.jpg', 3.0)]
+------------------------------------------------------------------------
+

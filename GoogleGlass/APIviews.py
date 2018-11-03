@@ -53,7 +53,12 @@ class DocumentList(APIView):
 				doc = Document.objects.latest('document')
 				obj = Object.objects.get(object_id=doc.object_id)
 				
-				return Response(obj.status, status=status.HTTP_201_CREATED)
+				return Response((obj.status,obj.object_id), status=status.HTTP_201_CREATED)
+			# http -f POST http://192.168.178.38:8000/GoogleGlass/documents/ todo='getstatusQR' object_id='0_h_1OG_Flur192'
+			if toDo == 'getstatusQR':	
+				objID = serializer.validated_data.get('object_id')
+				obj = Object.objects.get(object_id=objID)		
+				return Response((obj.status,obj.object_id), status=status.HTTP_201_CREATED)
 			# http -f POST http://192.168.178.38:8000/GoogleGlass/documents/ todo='editstatus' edit_status_to='FUNNY' object_id='0_h_1OG_Flur192'
 			if toDo == 'editstatus':	
 				editStatusTo = serializer.validated_data.get('edit_status_to')
@@ -87,18 +92,22 @@ class DocumentList(APIView):
 				doc_old2 = Document.objects.filter(document="documents/None/No_images.jpg/")
 				doc_old1.delete()
 				doc_old2.delete()
-				return Response(("Add image with object id: "+ objID), status=status.HTTP_201_CREATED)
+				return Response(("Added image with object id: "+ objID), status=status.HTTP_201_CREATED)
 			# http -f POST http://192.168.178.38:8000/GoogleGlass/documents/ todo='deleteimage' object_id='0_h_1OG_Flur192'
 			elif toDo == 'deleteimage':
-				for infile in glob.glob( os.path.join(dir_source, '*.jpg') ):
-					oldName = infile
-					os.remove(infile)
-				cut = infile.rfind("/")
-				oldName = oldName[cut+1:]
-				doc_old1 = Document.objects.filter(document="documents/"+oldName)
+				# check if image is in folder
+				if os.path.join(dir_source, '*.jpg'):
+					for infile in glob.glob( os.path.join(dir_source, '*.jpg') ):
+						oldName = infile
+						os.remove(infile)
+						cut = infile.rfind("/")
+						oldName = oldName[cut+1:]
+						doc_old1 = Document.objects.filter(document="documents/"+oldName)
+						doc_old1.delete()
 				doc_old2 = Document.objects.filter(document="documents/None/No_images.jpg/")
-				doc_old1.delete()
+				doc_old3 = Document.objects.filter(document="temp")
 				doc_old2.delete()
+				doc_old3.delete()
 					
 				return Response(("Deleted image."), status=status.HTTP_201_CREATED)
 			# send an existent object_id
